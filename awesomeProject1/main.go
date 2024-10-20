@@ -14,8 +14,15 @@ func main() {
 	//fmt.Println(task2)
 
 	arr := []string{"Task 1", "Task 2", "Task 3"}
-	fmt.Println("tasks",arr)
-	fmt.Println(arr[0])
+	// fmt.Println("tasks",arr)
+	// fmt.Println(arr[0])
+
+	for index, task := range arr{
+		points := index + 1
+		//fmt.Println(points,task)
+		fmt.Printf("%d. %s\n", points, task)
+	}
+
 
 
 }
