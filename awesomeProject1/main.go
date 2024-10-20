@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+
+
 func main() {
     // var task1 = "Task 1 is to create a todo app" 
 	// var emptyVar string
@@ -16,13 +18,24 @@ func main() {
 	arr := []string{"Task 1", "Task 2", "Task 3"}
 	// fmt.Println("tasks",arr)
 	// fmt.Println(arr[0])
+	//newTask := "updated task"
+	arr = addTask("hicking", arr)
+	//addTask()
+	listTask(arr)
 
+
+
+}
+
+func addTask(newTask string,arr []string) []string{
+	updateArr := append(arr, newTask)
+	return updateArr
+}
+
+func listTask(arr []string){
 	for index, task := range arr{
 		points := index + 1
 		//fmt.Println(points,task)
 		fmt.Printf("%d. %s\n", points, task)
 	}
-
-
-
 }
